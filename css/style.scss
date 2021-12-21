@@ -1,0 +1,197 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
+    padding: 0;
+    color: #1F1F1F;
+    background-color: #FFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+* {
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+.mail-widget {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background: #C1E6FF;
+        cursor: pointer;
+        transition: .3s ease;
+        img {
+            display: block;
+            width: 27px;
+            height: 20px;
+            object-fit: contain;
+        }
+        &:hover {
+            box-shadow: 0px 4px 30px rgba(0, 118, 214, 0.08);
+        }
+    }
+    &__wrapper {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 340px;
+        max-width: calc(100vw - 2rem);
+        display: flex;
+        flex-direction: column;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 30px rgba(0, 118, 214, 0.08);
+        transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        opacity: 0;
+        transform: translateY(300%);
+    }
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 16px 14px 20px;
+        background: #C1E6FF;
+        border-radius: 10px 10px 0px 0px;
+        color: #005E9C;
+    }
+    &__head-icon {
+        margin-right: 8px;
+        img {
+            width: 23px;
+            height: 16px;
+            object-fit: contain;
+            display: block;
+        }
+    }
+    &__title {
+        font-size: 18px;
+        line-height: 140.7%;
+        margin-right: auto;
+    }
+    &__close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #C1E6FF;
+        border: 1px solid #ACDEFF;
+        cursor: pointer;
+        img {
+            display: block;
+            width: 8px;
+            height: 8px;
+            object-fit: contain;
+        }
+    }
+    &__body {
+        padding: 22px 20px 30px;
+    }
+    &__text {
+        font-size: 13px;
+        line-height: 140.7%;
+        color: #1F1F1F;
+        margin-bottom: 16px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .form-group {
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__privacy {
+        font-size: 10px;
+        line-height: 140.7%;
+        color: #9C9C9C;
+        margin-bottom: 9px;
+        a {
+            text-decoration: none;
+            color: #0082D9;
+        }
+    }
+    &__submit {
+        padding: 14px 35px 13px;
+        background: #0082D9;
+        color: #FFFFFF;
+        border-radius: 100px;
+        border: none;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 140.7%;
+        align-self: flex-start;
+        transition: .3s ease;
+        cursor: pointer;
+        outline: none;
+    }
+    &.active {
+        .mail-widget {
+            &__wrapper {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+    &__input {
+        font-family: inherit;
+        font-size: 13px;
+        outline: none;
+        background: #F5FBFF;
+        color: #353535;
+        border: none;
+        line-height: 140.7%;
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 22px 10px;
+    }
+    &__label {
+        position: absolute;
+        top: 17px;
+        left: 22px;
+        font-size: 13px;
+        line-height: 140.7%;
+        transition: .3s ease;
+        span {
+            color: red;
+        }
+    }
+}
+
+.form-group__input:focus ~ .form-group__label,
+.form-group__input:not(:placeholder-shown) ~ .form-group__label {
+    top: 12px;
+    font-size: 8px;
+    line-height: 140.7%;
+    color: #9A9A9A;
+}
+
+@media (max-width: 640px) {
+    .mail-widget {
+        right: 1rem;
+    }
+}

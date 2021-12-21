@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Widget</title>
+</head>
+<body>
+    <div class="mail-widget js-widget">
+        <div class="mail-widget__btn js-widget-btn">
+            <img src="img/mail.svg" alt="">
+        </div>
+        <div class="mail-widget__wrapper">
+            <div class="mail-widget__head">
+                <div class="mail-widget__head-icon">
+                    <img src="img/mail.svg" alt="">
+                </div>
+                <div class="mail-widget__title">
+                    Работайте с нами
+                </div>
+                <div class="mail-widget__close js-widget-close">
+                    <img src="img/close.svg" alt="">
+                </div>
+            </div>
+            <div class="mail-widget__body">
+                <div class="mail-widget__text">
+                    Отправьте заявку на сотрудничество, чтобы получить прайс и узнать больше о возможностях для бизнеса
+                </div>
+                <form action="#" class="mail-widget__form">
+                    <div class="form-group">
+                        <input type="text" class="form-group__input" id="input-1" placeholder=" ">
+                        <label for="input-1" class="form-group__label">
+                            Ваше имя
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-group__input" id="input-2" placeholder=" ">
+                        <label for="input-2" class="form-group__label">
+                            Ваш E-mail<span>*</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-group__input" id="input-3" placeholder=" ">
+                        <label for="input-3" class="form-group__label">
+                            Ваш телефон<span>*</span>
+                        </label>
+                    </div>
+                    <div class="mail-widget__privacy">
+                        Отправляя свой запрос вы соглашаетесь с <a href="#">правилами</a> сайта и <a href="">политикой обработки персональных данных</a> 
+                    </div>
+                    <button type="submit" class="mail-widget__submit">
+                        Отравить заявку
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/widget.js"></script>
+</body>
+</html>
